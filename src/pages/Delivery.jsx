@@ -16,6 +16,7 @@ const Delivery = () => {
     { area: 'Downtown', time: '25-30 minutes', fee: '20 EGP' }
   ];
 
+  
   const checkDelivery = () => {
     if (areaName.trim()) {
       alert(`🚚 Delivery available in ${areaName}! Estimated time: 25-35 minutes`);
