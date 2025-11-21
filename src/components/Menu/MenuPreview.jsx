@@ -1,4 +1,3 @@
-// src/components/Menu/MenuPreview.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +14,6 @@ const MenuPreview = () => {
   ];
 
   const menuItems = [
-    // Starters
     {
       id: 1,
       name: 'Truffle Arancini',
@@ -51,7 +49,6 @@ const MenuPreview = () => {
       image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
     },
 
-    // Main Courses
     {
       id: 5,
       name: 'Wagyu Beef Burger',
@@ -104,7 +101,6 @@ const MenuPreview = () => {
       popular: true
     },
 
-    // Desserts
     {
       id: 11,
       name: 'Chocolate Fondant',
@@ -139,7 +135,6 @@ const MenuPreview = () => {
       image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
     },
 
-    // Drinks
     {
       id: 15,
       name: 'Signature Cocktail',
@@ -192,7 +187,6 @@ const MenuPreview = () => {
     <section id="menu" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             BROWSE OUR MENU
@@ -202,7 +196,6 @@ const MenuPreview = () => {
             Discover our carefully crafted dishes made with the finest ingredients
           </p>
 
-          {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map(category => (
               <button
@@ -220,23 +213,19 @@ const MenuPreview = () => {
           </div>
         </div>
 
-        {/* Menu Items Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
           {filteredItems.map(item => (
             <div
               key={item.id}
               className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group overflow-hidden"
             >
-              {/* Item Image */}
               <div className="relative h-48 bg-gray-100 overflow-hidden">
-                {/* Loading Skeleton */}
                 {!loadedImages[item.id] && (
                   <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse flex items-center justify-center">
                     <div className="text-gray-400 text-sm">Loading deliciousness...</div>
                   </div>
                 )}
                 
-                {/* Actual Image */}
                 <img 
                   src={item.image} 
                   alt={item.name}
@@ -247,7 +236,6 @@ const MenuPreview = () => {
                   onError={(e) => handleImageError(e, item.id)}
                 />
                 
-                {/* Badges */}
                 <div className="absolute top-4 left-4 flex gap-2">
                   {item.popular && (
                     <span className="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
@@ -261,7 +249,6 @@ const MenuPreview = () => {
                   )}
                 </div>
                 
-                {/* Quick View Overlay */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                   <button className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-white/90 w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110">
                     <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -270,13 +257,11 @@ const MenuPreview = () => {
                   </button>
                 </div>
 
-                {/* Price Tag */}
                 <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
                   <span className="text-amber-600 font-bold text-sm">{item.price}</span>
                 </div>
               </div>
 
-              {/* Item Details */}
               <div className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="font-bold text-gray-900 text-lg group-hover:text-amber-600 transition-colors duration-300">
@@ -287,7 +272,6 @@ const MenuPreview = () => {
                   {item.description}
                 </p>
                 
-                {/* Add to Cart Button */}
                 <button className="w-full bg-amber-600 text-white py-3 rounded-xl hover:bg-amber-700 transition-all duration-300 transform hover:scale-105 font-semibold flex items-center justify-center space-x-2 group/btn shadow-lg hover:shadow-xl">
                   <span>Add to Order</span>
                   <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -299,10 +283,8 @@ const MenuPreview = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-3xl p-12 text-white shadow-2xl relative overflow-hidden">
-            {/* Background Pattern */}
             <div className="absolute inset-0 bg-black/10"></div>
             
             <div className="relative z-10">
@@ -335,7 +317,6 @@ const MenuPreview = () => {
                 </Link>
               </div>
 
-              {/* Quick Stats */}
               <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-amber-400/30">
                 <div className="text-center">
                   <div className="text-3xl font-bold">18+</div>
