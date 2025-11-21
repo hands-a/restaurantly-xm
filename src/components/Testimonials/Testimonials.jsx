@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Testimonials = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-
+ 
   const testimonials = [
     {
       id: 1,
