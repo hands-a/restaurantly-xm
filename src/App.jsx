@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header.jsx';
@@ -11,7 +10,7 @@ import Delivery from './pages/Delivery.jsx';
 
 function App() {
   return (
-    <Router> {/* HashRouter يعمل أفضل مع GitHub Pages */}
+    <Router> 
       <div className="font-sans min-h-screen flex flex-col bg-white">
         <Header />
         
