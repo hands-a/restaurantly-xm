@@ -1,4 +1,3 @@
-// src/pages/Delivery.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -27,7 +26,6 @@ const Delivery = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50">
-      {/* Header Section */}
       <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -73,9 +71,7 @@ const Delivery = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Main Content */}
           <div className="space-y-8">
-            {/* Delivery/Pickup Info Card */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <div className="text-center mb-8">
                 <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -101,7 +97,6 @@ const Delivery = () => {
                 </p>
               </div>
 
-              {/* Area Check */}
               {activeTab === 'delivery' && (
                 <div className="mb-8">
                   <label className="block text-sm font-medium text-gray-700 mb-3">
@@ -125,7 +120,6 @@ const Delivery = () => {
                 </div>
               )}
 
-              {/* Action Buttons */}
               <div className="space-y-4">
                 <Link
                   to="/menu"
@@ -142,7 +136,6 @@ const Delivery = () => {
               </div>
             </div>
 
-            {/* Features Grid */}
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -176,9 +169,7 @@ const Delivery = () => {
             </div>
           </div>
 
-          {/* Sidebar */}
           <div className="space-y-6">
-            {/* Delivery Areas */}
             <div className="bg-white rounded-2xl shadow-lg p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center space-x-2">
                 <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -201,7 +192,6 @@ const Delivery = () => {
               </div>
             </div>
 
-            {/* Special Offer */}
             <div className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-6 text-white hover:shadow-xl transition-shadow">
               <div className="flex items-center space-x-3 mb-3">
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -217,7 +207,6 @@ const Delivery = () => {
               </div>
             </div>
 
-            {/* Operating Hours */}
             <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Operating Hours</h3>
               <div className="space-y-2">
@@ -238,7 +227,6 @@ const Delivery = () => {
           </div>
         </div>
 
-        {/* Stats Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="transform hover:scale-105 transition-transform">
@@ -260,11 +248,9 @@ const Delivery = () => {
           </div>
         </div>
 
-        {/* Payment Methods */}
         <div className="mt-8 bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Accepted Payment Methods</h3>
           <div className="flex justify-center items-center space-x-6 flex-wrap">
-            {/* Cash */}
             <div className="flex flex-col items-center group transform hover:scale-110 transition-transform">
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-green-200 transition-colors">
                 <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -274,7 +260,6 @@ const Delivery = () => {
               <span className="text-xs text-gray-600 font-medium">Cash</span>
             </div>
 
-            {/* Credit Card */}
             <div className="flex flex-col items-center group transform hover:scale-110 transition-transform">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-blue-200 transition-colors">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -284,7 +269,6 @@ const Delivery = () => {
               <span className="text-xs text-gray-600 font-medium">Credit Card</span>
             </div>
 
-            {/* Vodafone Cash */}
             <div className="flex flex-col items-center group transform hover:scale-110 transition-transform">
               <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-red-200 transition-colors">
                 <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -294,7 +278,6 @@ const Delivery = () => {
               <span className="text-xs text-gray-600 font-medium">Vodafone Cash</span>
             </div>
 
-            {/* InstaPay */}
             <div className="flex flex-col items-center group transform hover:scale-110 transition-transform">
               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-purple-200 transition-colors">
                 <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -304,7 +287,6 @@ const Delivery = () => {
               <span className="text-xs text-gray-600 font-medium">InstaPay</span>
             </div>
 
-            {/* Bank Transfer */}
             <div className="flex flex-col items-center group transform hover:scale-110 transition-transform">
               <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-amber-200 transition-colors">
                 <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
