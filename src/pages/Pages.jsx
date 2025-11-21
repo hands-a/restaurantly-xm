@@ -1,4 +1,3 @@
-// src/pages/Pages.jsx
 import React, { useState } from 'react';
 
 const Pages = () => {
@@ -75,7 +74,6 @@ const Pages = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header Section */}
       <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -88,7 +86,6 @@ const Pages = () => {
       </div>
 
       <div className="container mx-auto px-4 py-12">
-        {/* Branches Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -99,7 +96,6 @@ const Pages = () => {
             </p>
           </div>
 
-          {/* Branch Tabs */}
           <div className="flex justify-center mb-8">
             <div className="bg-white rounded-2xl shadow-lg p-2 flex space-x-2">
               {branches.map((branch, index) => (
@@ -122,10 +118,8 @@ const Pages = () => {
             </div>
           </div>
 
-          {/* Active Branch Details */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <div className="grid md:grid-cols-2 gap-8">
-              {/* Branch Image */}
               <div className="h-80 md:h-full">
                 <img
                   src={branches[activeBranch].image}
@@ -134,13 +128,11 @@ const Pages = () => {
                 />
               </div>
 
-              {/* Branch Info */}
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {branches[activeBranch].name}
                 </h3>
 
-                {/* Address & Contact */}
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start space-x-3">
                     <svg className="w-5 h-5 text-amber-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -157,7 +149,6 @@ const Pages = () => {
                   </div>
                 </div>
 
-                {/* Operating Hours */}
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Operating Hours</h4>
                   <div className="space-y-2 text-sm">
@@ -176,7 +167,6 @@ const Pages = () => {
                   </div>
                 </div>
 
-                {/* Features */}
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Features</h4>
                   <div className="flex flex-wrap gap-2">
@@ -191,7 +181,6 @@ const Pages = () => {
                   </div>
                 </div>
 
-                {/* Action Buttons */}
                 <div className="flex space-x-4">
                   <a
                     href={branches[activeBranch].map}
@@ -210,7 +199,6 @@ const Pages = () => {
           </div>
         </div>
 
-        {/* Team Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -250,7 +238,6 @@ const Pages = () => {
           </div>
         </div>
 
-        {/* Stats Section */}
         <div className="bg-white rounded-2xl shadow-lg p-8">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="transform hover:scale-105 transition-transform">
