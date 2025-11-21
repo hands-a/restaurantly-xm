@@ -1,4 +1,3 @@
-// src/components/Footer/Footer.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -45,13 +44,10 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       
-      {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
           
-          {/* Brand & Contact Section */}
           <div className="space-y-8">
-            {/* Brand */}
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">R</span>
@@ -66,7 +62,6 @@ const Footer = () => {
               Experience the finest culinary journey in California with our exceptional dishes and premium service.
             </p>
 
-            {/* Contact Info */}
             <div className="space-y-4">
               <div className="flex items-center space-x-4 group cursor-pointer">
                 <div className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center group-hover:bg-amber-700 transition-colors duration-300">
@@ -97,7 +92,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Social Media */}
             <div className="flex space-x-4">
               {['Facebook', 'Twitter', 'Instagram', 'YouTube'].map((social) => (
                 <button
@@ -111,10 +105,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links Sections */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             
-            {/* Product Links */}
             <div>
               <h3 className="font-bold text-lg mb-4 text-amber-400">PRODUCT</h3>
               <div className="space-y-2">
@@ -130,7 +122,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Menu & Contact Links */}
             <div className="space-y-6">
               <div>
                 <h3 className="font-bold text-lg mb-4 text-amber-400">MENU</h3>
@@ -163,7 +154,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Utility Pages */}
             <div>
               <h3 className="font-bold text-lg mb-4 text-amber-400">UTILITY PAGES</h3>
               <div className="space-y-2">
@@ -189,7 +179,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Locations Section */}
         <div className="border-t border-gray-800 pt-12">
           <h3 className="font-bold text-2xl mb-8 text-center text-amber-400">OUR LOCATIONS</h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
@@ -235,16 +224,13 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
             <div className="text-gray-400 text-sm">
               © {currentYear} Restaurantly X. All rights reserved.
             </div>
 
-            {/* Legal Links */}
             <div className="flex space-x-6">
               {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((link) => (
                 <button
@@ -256,7 +242,6 @@ const Footer = () => {
               ))}
             </div>
 
-            {/* Payment Methods */}
             <div className="flex items-center space-x-4">
               <span className="text-gray-400 text-sm">We accept:</span>
               <div className="flex space-x-2">
