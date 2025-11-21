@@ -1,4 +1,3 @@
-// src/components/Reservation/Reservation.jsx
 import React, { useState } from 'react';
 
 const Reservation = () => {
@@ -22,7 +21,6 @@ const Reservation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Reservation Data:', formData);
     alert('Reservation submitted successfully!');
   };
@@ -31,7 +29,6 @@ const Reservation = () => {
     <section id="reservation" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             MAKE A RESERVATION
@@ -44,12 +41,9 @@ const Reservation = () => {
 
         <div className="grid lg:grid-cols-3 gap-12 items-start">
           
-          {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8">
             
-            {/* Contact Methods */}
             <div className="space-y-6">
-              {/* Phone */}
               <div className="flex items-start space-x-4 p-6 bg-amber-50 rounded-2xl hover:bg-amber-100 transition-colors duration-300 group">
                 <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,7 +59,6 @@ const Reservation = () => {
                 </div>
               </div>
 
-              {/* Email */}
               <div className="flex items-start space-x-4 p-6 bg-amber-50 rounded-2xl hover:bg-amber-100 transition-colors duration-300 group">
                 <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +74,6 @@ const Reservation = () => {
                 </div>
               </div>
 
-              {/* Quick Reservation Button */}
               <button className="w-full bg-amber-600 text-white py-4 rounded-xl hover:bg-amber-700 transition-all duration-300 transform hover:scale-105 font-semibold text-lg shadow-lg hover:shadow-xl flex items-center justify-center space-x-3">
                 <span>Reservate now</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +82,6 @@ const Reservation = () => {
               </button>
             </div>
 
-            {/* Locations */}
             <div className="bg-gray-50 rounded-2xl p-6">
               <h3 className="font-bold text-gray-900 text-lg mb-4">OUR LOCATIONS</h3>
               <div className="space-y-4">
@@ -117,7 +108,6 @@ const Reservation = () => {
               </button>
             </div>
 
-            {/* Opening Hours */}
             <div className="bg-amber-50 rounded-2xl p-6">
               <h3 className="font-bold text-gray-900 text-lg mb-4">OPEN HOURS</h3>
               <div className="space-y-3">
@@ -140,7 +130,6 @@ const Reservation = () => {
             </div>
           </div>
 
-          {/* Reservation Form */}
           <div className="lg:col-span-2">
             <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 md:p-12 shadow-2xl">
               <h3 className="text-3xl font-bold text-gray-900 mb-2">Make a reservation</h3>
@@ -148,7 +137,6 @@ const Reservation = () => {
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
-                  {/* Name */}
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Full Name *
@@ -165,7 +153,6 @@ const Reservation = () => {
                     />
                   </div>
 
-                  {/* Email */}
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
@@ -182,7 +169,6 @@ const Reservation = () => {
                     />
                   </div>
 
-                  {/* Phone */}
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number *
@@ -199,7 +185,6 @@ const Reservation = () => {
                     />
                   </div>
 
-                  {/* Date */}
                   <div>
                     <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-2">
                       Date *
@@ -215,7 +200,6 @@ const Reservation = () => {
                     />
                   </div>
 
-                  {/* Time */}
                   <div>
                     <label htmlFor="time" className="block text-sm font-medium text-gray-700 mb-2">
                       Time *
@@ -244,7 +228,6 @@ const Reservation = () => {
                     </select>
                   </div>
 
-                  {/* Guests */}
                   <div>
                     <label htmlFor="guests" className="block text-sm font-medium text-gray-700 mb-2">
                       Number of Guests *
@@ -266,7 +249,6 @@ const Reservation = () => {
                   </div>
                 </div>
 
-                {/* Special Requests */}
                 <div>
                   <label htmlFor="specialRequests" className="block text-sm font-medium text-gray-700 mb-2">
                     Special Requests
@@ -282,7 +264,6 @@ const Reservation = () => {
                   ></textarea>
                 </div>
 
-                {/* Submit Button */}
                 <button
                   type="submit"
                   className="w-full bg-amber-600 text-white py-4 rounded-xl hover:bg-amber-700 transition-all duration-300 transform hover:scale-105 font-semibold text-lg shadow-lg hover:shadow-xl"
