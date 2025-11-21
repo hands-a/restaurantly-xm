@@ -1,4 +1,3 @@
-// src/components/Header/Header.jsx
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -7,7 +6,6 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
-  // Effect for scroll detection
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -80,7 +78,6 @@ const Header = () => {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          {/* Logo with improved design */}
           <Link 
             to="/" 
             className="flex items-center space-x-3 group"
@@ -98,7 +95,6 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation with enhanced styling */}
           <nav className="hidden lg:flex items-center space-x-1">
             {navItems.map((item) => (
               <Link
@@ -116,14 +112,12 @@ const Header = () => {
                   {item.icon}
                 </div>
                 <span>{item.label}</span>
-                {/* Animated underline for active state */}
                 {isActivePath(item.path) && (
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-amber-600 rounded-full"></div>
                 )}
               </Link>
             ))}
             
-            {/* Enhanced Order Online Button */}
             <div className="ml-4 relative">
               <Link
                 to="/menu"
@@ -138,7 +132,6 @@ const Header = () => {
                 </svg>
               </Link>
               
-              {/* Quick badge */}
               <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full animate-pulse shadow-lg">
                 <svg className="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -148,7 +141,6 @@ const Header = () => {
             </div>
           </nav>
 
-          {/* Enhanced Mobile Menu Button */}
           <button
             className="lg:hidden relative w-12 h-12 flex flex-col items-center justify-center space-y-1.5 group bg-amber-50 rounded-xl hover:bg-amber-100 transition-all duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -166,7 +158,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Enhanced Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4 bg-white/95 backdrop-blur-md border border-amber-200 rounded-2xl shadow-2xl p-6 animate-fade-in">
             <div className="flex flex-col space-y-3">
@@ -190,7 +181,6 @@ const Header = () => {
                 </Link>
               ))}
               
-              {/* Mobile Order Online Button with enhanced style */}
               <div className="pt-4 border-t border-amber-200 mt-2">
                 <Link
                   to="/menu"
