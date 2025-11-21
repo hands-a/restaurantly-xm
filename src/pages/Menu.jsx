@@ -1,4 +1,3 @@
-// src/pages/Menu.jsx
 import React, { useState } from 'react';
 
 const Menu = () => {
@@ -17,7 +16,6 @@ const Menu = () => {
   ];
 
   const menuItems = [
-    // Starters
     {
       id: 1,
       name: 'Truffle Arancini',
@@ -136,7 +134,6 @@ const Menu = () => {
       prepTime: '20 min'
     },
 
-    // Desserts
     {
       id: 11,
       name: 'Chocolate Fondant',
@@ -183,7 +180,6 @@ const Menu = () => {
       prepTime: '8 min'
     },
 
-    // Drinks
     {
       id: 15,
       name: 'Signature Cocktail',
@@ -235,7 +231,6 @@ const Menu = () => {
     ? menuItems 
     : menuItems.filter(item => item.category === activeCategory);
 
-  // Pagination logic
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
@@ -294,9 +289,7 @@ const Menu = () => {
       <div className="container mx-auto px-4 py-8 -mt-8">
         <div className="flex flex-col lg:flex-row gap-8">
           
-          {/* Main Content */}
           <div className="lg:w-3/4">
-            {/* Category Filter */}
             <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
               <div className="flex flex-wrap gap-3 justify-center">
                 {categories.map(category => (
@@ -319,14 +312,12 @@ const Menu = () => {
               </div>
             </div>
 
-            {/* Menu Items Grid */}
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
               {currentItems.map(item => (
                 <div
                   key={item.id}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
                 >
-                  {/* Item Image */}
                   <div className="relative h-48 overflow-hidden">
                     <img 
                       src={item.image} 
@@ -334,7 +325,6 @@ const Menu = () => {
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                     />
                     
-                    {/* Badges */}
                     <div className="absolute top-3 left-3 flex gap-2">
                       {item.popular && (
                         <span className="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
@@ -348,18 +338,15 @@ const Menu = () => {
                       )}
                     </div>
 
-                    {/* Prep Time */}
                     <div className="absolute top-3 right-3 bg-black/70 text-white px-2 py-1 rounded-full text-xs">
                       ⏱️ {item.prepTime}
                     </div>
 
-                    {/* Price Tag */}
                     <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
                       <span className="text-amber-600 font-bold">${item.price}</span>
                     </div>
                   </div>
 
-                  {/* Item Details */}
                   <div className="p-5">
                     <div className="mb-3">
                       <h3 className="font-bold text-gray-900 text-lg mb-1 group-hover:text-amber-600 transition-colors">
@@ -370,7 +357,6 @@ const Menu = () => {
                       </p>
                     </div>
 
-                    {/* Ingredients & Calories */}
                     <div className="mb-4">
                       <div className="flex flex-wrap gap-1 mb-2">
                         {item.ingredients.slice(0, 3).map((ingredient, index) => (
@@ -393,7 +379,6 @@ const Menu = () => {
                       </div>
                     </div>
 
-                    {/* Quantity Selector & Add to Cart */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3 bg-gray-100 rounded-xl p-1">
                         <button
@@ -428,7 +413,6 @@ const Menu = () => {
               ))}
             </div>
 
-            {/* Pagination */}
             {totalPages > 1 && (
               <div className="flex justify-center items-center space-x-2 mb-8">
                 <button
@@ -471,7 +455,6 @@ const Menu = () => {
             )}
           </div>
 
-          {/* Shopping Cart Sidebar */}
           <div className="lg:w-1/4">
             <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-4">
               <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center space-x-2">
@@ -547,7 +530,6 @@ const Menu = () => {
               )}
             </div>
 
-            {/* Special Offers */}
             <div className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-6 text-white mt-6">
               <div className="flex items-center space-x-3 mb-3">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
