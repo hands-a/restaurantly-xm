@@ -1,4 +1,3 @@
-// src/components/Hero/Hero.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,21 +5,17 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 via-white to-orange-50 overflow-hidden">
       
-      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(#e5a536_1px,transparent_1px)] [background-size:50px_50px]"></div>
       </div>
       
-      {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-amber-200 rounded-full blur-xl opacity-30 animate-float"></div>
       <div className="absolute bottom-20 right-10 w-32 h-32 bg-orange-200 rounded-full blur-xl opacity-30 animate-float-delayed"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-          {/* Content Section */}
           <div className="text-center lg:text-left space-y-8">
-            {/* Main Heading */}
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
                 The best food
@@ -33,7 +28,6 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 to="/menu"
@@ -57,7 +51,6 @@ const Hero = () => {
               </Link>
             </div>
 
-            {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 max-w-md mx-auto lg:mx-0">
               <div className="text-center">
                 <div className="text-2xl font-bold text-amber-600">50+</div>
@@ -74,12 +67,9 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Image/Video Section */}
           <div className="relative">
-            {/* Main Image Container */}
             <div className="relative bg-gradient-to-br from-amber-200 to-orange-300 rounded-3xl h-80 lg:h-96 xl:h-[500px] flex items-center justify-center shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500 group overflow-hidden">
               
-              {/* Video Play Button */}
               <button className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-all duration-300">
                 <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-8 h-8 text-amber-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
@@ -93,7 +83,6 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Floating Cards */}
             <div className="absolute -top-4 -right-4 bg-white p-4 rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300">
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
@@ -118,13 +107,11 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Decorative Element */}
             <div className="absolute -z-10 -bottom-6 -right-6 w-32 h-32 bg-amber-200 rounded-full blur-2xl opacity-50"></div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-amber-600 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-amber-600 rounded-full mt-2"></div>
